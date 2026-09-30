@@ -1,0 +1,3 @@
+interface:
+  display_name: "MVP 守门员"
+  short_description: "辅助并监督 vibe coding 遵循 MVP 思路"

@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 打包产物（本仓库不跟踪分发用的 zip）
+*.zip
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 临时文件
+__pycache__/
+*.tmp
