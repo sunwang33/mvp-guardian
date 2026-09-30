@@ -1,7 +1,8 @@
 ---
 name: mvp-guardian
 description: "MVP 开发守门员：在 vibe coding 过程中辅助并监督用户遵循 MVP 思路（新产品开发，也给已有产品加拓展功能）。触发：用户说「mvp」「mvp检查」「新功能」「开始开发」「做一个网站/工具/应用」，或对话出现明确开发意图。v2.1 硬门槛：阶段门禁链（三问 → mvp-plan 确认 → PRD 确认 → UI 结构确认 → 写码前检查清单），任何一道未过禁止写生产代码；计划落盘到项目根目录 mvp-plan.md 并维护阶段状态机；需求模糊时进入 grill 式追问；已有产品的小功能可走增量简化流程。"
-metadata:/n  short-description: "辅助并监督 vibe coding 遵循 MVP 思路"
+metadata:
+  short-description: "辅助并监督 vibe coding 遵循 MVP 思路"
 ---
 
 
