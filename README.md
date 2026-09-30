@@ -153,9 +153,14 @@ v2 的修订来自一次真实实测评估：初版在 Codex 实测中被判定�
 
 ## 致谢
 
-- 内容源自作者在林粒粒学院 AI 编程实战营的亲身实践笔记，非理论推演
-- 设计阶段协同参考了 [taste-skill](https://github.com/Leonxlnx/taste-skill) 的反模板化思路
+这个 skill 里的每条规则，都来自我在林粒粒学院 AI 编程实战营学习时踩过的坑、记下的笔记。
+
+- 感谢林粒粒老师，课讲得通俗易懂，跟着练就能上手，笔记里才有了这么多一手素材
+- 感谢小轩班班，平时盯进度、催作业，没有这份督促，这些笔记大概率在收藏夹里吃灰
+- 感谢同学 Shzy，看他的作品和做法，给了我不少设计上的灵感
+
+UI 部分参考了 [taste-skill](https://github.com/Leonxlnx/taste-skill) 的反模板化思路，少了一些 AI 味。
 
 ## License
 
-[MIT](LICENSE) © 2026 孙旺 (sunwang33)
+[MIT](LICENSE) © 2026 sunwang33
