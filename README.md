@@ -128,14 +128,18 @@ bash scripts/deploy.sh --dry    # 只看会做什么，不实际写入
 ├── SKILL.md                     # 技能本体（WorkBuddy 版，根目录直接可装）
 ├── references/
 │   └── mvp-principles.md        # 实践原则详版（附出处与修订记录）
-├── codex/                       # Codex 适配
+├── codex/                       # Codex 适配（SKILL.md 与 AGENTS.md 由主本自动生成）
 │   ├── SKILL.md                 # frontmatter 按 Codex 规范
 │   ├── prompts/mvp.md           # /mvp 命令
 │   ├── AGENTS.md                # 项目级强制注入（可选）
 │   ├── agents/openai.yaml       # 界面显示元数据
 │   └── 安装说明.md
-└── scripts/deploy.sh            # 一键部署到本机
+└── scripts/
+    ├── deploy.sh                # 一键部署到本机
+    └── build_codex.py           # 由根目录 SKILL.md 重新生成 codex/ 两份文件
 ```
+
+> 改了根目录 `SKILL.md` 后，先跑 `python scripts/build_codex.py` 重新派生 Codex 两份文件，再 `deploy.sh` 部署——保证两个平台的规则永远同一个来源。
 
 ## 设计哲学与诚实边界
 
