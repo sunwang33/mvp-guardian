@@ -153,7 +153,7 @@ v2 的修订来自一次真实实测评估：初版在 Codex 实测中被判定�
 
 ## 致谢
 
-- 内容源自作者在 AI 编程实战营的亲身实践笔记，非理论推演
+- 内容源自作者在林粒粒学院 AI 编程实战营的亲身实践笔记，非理论推演
 - 设计阶段协同参考了 [taste-skill](https://github.com/Leonxlnx/taste-skill) 的反模板化思路
 
 ## License
