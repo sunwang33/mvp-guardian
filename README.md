@@ -47,32 +47,43 @@ flowchart TD
                               ↘ 已暂停（任意阶段可进入）
 ```
 
-## 安装
+## 下载与安装
 
-### WorkBuddy
+### 方式一：下载现成安装包（推荐给不熟悉命令行的用户）
+
+到 [**Releases 页面**](https://github.com/sunwang33/mvp-guardian/releases/latest)，按你用的工具下载对应压缩包：
+
+| 安装包 | 适用工具 | 装到哪里 |
+|--------|---------|---------|
+| `mvp-guardian.zip` | WorkBuddy | 解压出的 `mvp-guardian` 整个文件夹 → `~/.workbuddy/skills/` |
+| `mvp-guardian-codex-share.zip` | Codex | 里面的 `mvp-guardian/` 文件夹 → `~/.codex/skills/`；`prompts-mvp.md` 重命名为 `mvp.md` → `~/.codex/prompts/` |
+
+> Windows 上 `~` 就是 `C:\Users\你的用户名`。`~/.workbuddy/skills/` 即 `C:\Users\你的用户名\.workbuddy\skills\`。
+
+### 方式二：网页下载源码（不需要命令行）
+
+打开 [仓库首页](https://github.com/sunwang33/mvp-guardian) → 绿色 **Code** 按钮 → **Download ZIP**，解压后按下面的对应关系取文件。
+
+### 方式三：git clone（想跟着后续更新走用这个）
 
 ```bash
 git clone https://github.com/sunwang33/mvp-guardian.git
-cp -r mvp-guardian ~/.workbuddy/skills/
 ```
 
-### Codex CLI
+以后更新只需在该目录执行 `git pull`。
 
-Codex 原生支持 `SKILL.md` 格式技能，本仓库 `codex/` 目录下是适配版：
+### 装哪几个文件？
 
-```bash
-# 技能本体
-mkdir -p ~/.codex/skills/mvp-guardian
-cp codex/SKILL.md ~/.codex/skills/mvp-guardian/
-cp -r references ~/.codex/skills/mvp-guardian/
-cp -r codex/agents ~/.codex/skills/mvp-guardian/
+仓库里同时放了两个平台的适配版，按你用的工具取：
 
-# /mvp 手动召唤命令
-mkdir -p ~/.codex/prompts
-cp codex/prompts/mvp.md ~/.codex/prompts/mvp.md
-```
+| 你用的工具 | 需要的内容 | 目标位置 |
+|-----------|-----------|---------|
+| **WorkBuddy** | 仓库根目录的 `SKILL.md` + `references/` | `~/.workbuddy/skills/mvp-guardian/` |
+| **Codex** | `codex/SKILL.md` + `references/` + `codex/agents/`；以及 `codex/prompts/mvp.md` | `~/.codex/skills/mvp-guardian/` 和 `~/.codex/prompts/mvp.md` |
 
-Windows PowerShell 写法见 [`codex/安装说明.md`](codex/安装说明.md)。
+小提示：WorkBuddy 只要文件夹里有 `SKILL.md` 就能识别，把仓库根目录整个文件夹拷进 `~/.workbuddy/skills/` 也可以，多出来的 README、`codex/` 等不影响运行。
+
+Codex 的详细步骤（含 Windows PowerShell 写法）见 [`codex/安装说明.md`](codex/安装说明.md)。
 
 ### 一键部署（本仓库贡献者用）
 
