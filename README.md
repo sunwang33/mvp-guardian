@@ -78,8 +78,8 @@ flowchart TD
 
 | 安装包 | 适用工具 | 装到哪里 |
 |--------|---------|---------|
-| `mvp-guardian-v2.2.zip` | WorkBuddy | 解压出的 `mvp-guardian` 整个文件夹 → `~/.workbuddy/skills/` |
-| `mvp-guardian-codex-share-v2.2.zip` | Codex | 里面的 `mvp-guardian/` 文件夹 → `~/.codex/skills/`；`prompts-mvp.md` 重命名为 `mvp.md` → `~/.codex/prompts/` |
+| `mvp-guardian-v2.3.zip` | WorkBuddy | 解压出的 `mvp-guardian` 整个文件夹 → `~/.workbuddy/skills/` |
+| `mvp-guardian-codex-share-v2.3.zip` | Codex | 里面的 `mvp-guardian/` 文件夹 → `~/.codex/skills/`；`prompts-mvp.md` 重命名为 `mvp.md` → `~/.codex/prompts/` |
 
 > 历史版本的安装包留在各自版本的 Release 页里（可回退），但**建议始终用最新版**——`releases/latest` 页面上的就是当前推荐版本。Windows 上 `~` 就是 `C:\Users\你的用户名`。
 
@@ -168,13 +168,15 @@ bash scripts/deploy.sh --dry    # 只看会做什么，不实际写入
 
 ## 版本历史
 
-见 [CHANGELOG.md](CHANGELOG.md)。当前 **v2.2**。
+见 [CHANGELOG.md](CHANGELOG.md)。当前 **v2.3**。
 
 v2.0 的修订来自一次真实实测评估：初版在 Codex 实测中被判定为「6/10，是 MVP 提醒器而非守门员」——代理在 PRD 未确认时直接开始写页面。据此补齐了阶段门禁链、状态机、UI 门禁、写码前检查清单和报错安全回退。
 
 v2.1 的修订来自使用反馈：三处规则过刚需要放宽（报错处理以诊断为先、技术取舍按需判断、已有项目小任务走增量简化流程），并补上两个流程缺口（需求变更同步更新计划、验收后记录试用反馈）。
 
 v2.2 的修订来自「定调偏弱」的反馈：研究开源技能 `superpowers:brainstorming` 后吸收其路线分类、授权粒度、反自我合理化三处精华——新增**分档机制**（快速验证 / 增量 / 完整，单向棘轮）、**阶段授权不传递**、**自我合理化对照表**、多子系统先拆解、复述区分假设、PRD 四项自审。同时明确记录未采纳项（分节确认、浏览器可视化伴侣、Spec 文件体系等），保持自包含轻量。
+
+v2.3 的修订来自一次完整的双路径实测（完整档 + 增量档，六观察点五绿一黄）：完整档的写码前检查清单被「搭骨架、装依赖不算写代码」的语义空隙绕过，而增量档同机制生效。修复：触发点改为**状态触发**（进入「开发中」后的第一条回复，先输出清单再执行任何命令/文件写入/依赖安装），清单改照增量档有效的一句话自报格式。
 
 ## 贡献与反馈
 
