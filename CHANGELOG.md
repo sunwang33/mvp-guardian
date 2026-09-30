@@ -22,6 +22,11 @@ v2.0 上线后收到使用反馈：门禁链的方向是对的，但有三处规
 - 统一核对并同步全部文件：WorkBuddy 版、Codex 版（SKILL.md / AGENTS.md / prompts / 安装说明）、README、references
 - 措辞去课程痕迹：示例换为自有项目，口号改为自己的表述，出处标注不引用具体课节
 
+### 修复与工程化
+
+- 修复 `codex/SKILL.md` frontmatter 中 `metadata:` 与 `short-description` 之间换行被写成字面量的问题（会导致 Codex 端元数据解析异常）
+- 新增 `scripts/build_codex.py`：Codex 侧 `SKILL.md` 与 `AGENTS.md` 统一由根目录主本自动派生，附 frontmatter 结构自检，避免手工同步造成口径漂移与转义事故；README 项目结构同步说明维护顺序（改主本 → 生成 Codex → 部署）
+
 ## v2.0 - 2026-09-28
 
 ### 背景
