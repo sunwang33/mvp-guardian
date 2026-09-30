@@ -64,13 +64,23 @@ flowchart TD
 
 打开 [仓库首页](https://github.com/sunwang33/mvp-guardian) → 绿色 **Code** 按钮 → **Download ZIP**，解压后按下面的对应关系取文件。
 
-### 方式三：git clone（想跟着后续更新走用这个）
+### 方式三：git clone（开发者推荐）
+
+直接克隆到技能目录，之后 `git pull` 就能更新，不用重复下载：
 
 ```bash
-git clone https://github.com/sunwang33/mvp-guardian.git
+# macOS / Linux / Git Bash
+git clone https://github.com/sunwang33/mvp-guardian.git ~/.workbuddy/skills/mvp-guardian
 ```
 
-以后更新只需在该目录执行 `git pull`。
+```powershell
+# Windows PowerShell
+git clone https://github.com/sunwang33/mvp-guardian.git "$env:USERPROFILE\.workbuddy\skills\mvp-guardian"
+```
+
+克隆到别处也可以，装的时候把对应文件夹拷进技能目录即可（见下表）。以后更新只需在该仓库目录执行 `git pull`。
+
+> 本仓库根目录本身就是 WorkBuddy 技能目录结构（`SKILL.md` 在根），所以可以直接克隆到 `skills/` 下使用。
 
 ### 装哪几个文件？
 
